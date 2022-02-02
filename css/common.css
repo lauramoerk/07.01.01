@@ -1,0 +1,203 @@
+
+@font-face {
+    font-family:Roboto ;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+  }
+  
+  @font-face {
+    font-family: Didot;
+    src: url(../fonts/DidotRegular.ttf);
+}
+
+/*Body*/
+
+header{
+    background-color: white
+}
+
+body{
+    margin: 0;
+}
+
+  /*Typography*/
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 1rem;
+    margin-top: 1em;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    -webkit-text-stroke: 0.1rem black;
+  }
+  
+  h1 {
+    font-size: 3.052rem;
+    -webkit-text-stroke: 0.15rem black;
+    color: white;
+    font-family: "Didot", sans-serif;
+    padding: 2rem;
+    padding-left: 4rem;
+    padding-bottom: 0rem;
+    margin-top: 0;
+  }
+  
+  h2 {
+    font-size: 2.441rem;
+    -webkit-text-stroke: 0.15rem black;
+  }
+  
+  h3 {
+    font-size: 1.953rem;
+    -webkit-text-stroke: 0.15rem black;
+  }
+  
+  h4 {
+    font-size: 1.563rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1.563rem;
+    font-family: "Roboto" ;
+  }
+
+
+
+ /*Special Typography*/ 
+  
+  p > *:last-child {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  
+
+  .productview h2{
+    margin-bottom: 0rem;
+}
+
+
+
+
+  main{
+    padding: 2rem;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: inherit;
+  }
+
+
+  /*Navigation*/
+
+  
+.banner {
+    padding: 0;
+    border-bottom: 3px solid #000;
+    width: 100%;
+  }
+  
+
+
+  /* burgermenu */
+  .toggle-btn {
+    display: none;
+  }
+
+  
+
+  nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+nav ul li{
+    padding: 1rem;
+}  
+
+nav ul li a{
+    font-family: "Roboto", sans-serif;
+    -webkit-text-stroke: 0.1rem black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0%;
+}
+
+ nav ul li a:link {
+    color: #000;
+    text-decoration: none;
+  }
+  
+
+ nav ul li a:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  
+ nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+ nav ul li a:active {
+    color: #000;
+text-decoration: none;}
+
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-width:600px) {
+    
+.toggle-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+  .togglebuttonflex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  
+  nav {
+    display: none;
+  }
+
+  nav.shown {
+    border-top: 1px solid #000;
+    padding-top: 1rem;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+  }
+
+  nav ul {
+    display: flex;
+    flex-flow: column;
+  }
+}

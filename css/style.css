@@ -1,0 +1,302 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+}
+
+/*Product List Style*/
+
+/* fallback layout*/
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+}
+
+article {
+  margin: 1rem 0;
+}
+
+@supports (display: grid) {
+  main {
+    max-width: 10000px;
+    margin: 0;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  .productlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+}
+
+.productlist {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 80%;
+}
+
+.sale-item img {
+  order: -1;
+  align-self: center;
+
+}
+
+.sale-item {
+  display: flex;
+  flex-flow: column;
+  border-radius: 0.1rem;
+  padding: 2rem;
+  box-shadow: 0px 0px 2px #252729;
+}
+
+.sale-item:hover{
+    opacity: 0.7;
+}
+
+.sale-item > button {
+  margin-top: auto;
+  background: #000;
+  color: white;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  border-radius: 0.05rem;
+  font-size: 1.2rem;
+}
+
+
+
+.subtle {
+  color: #343a40;
+}
+
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  color: var(--background-color);
+  padding: 1rem;
+}
+
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discounted > p {
+  margin-bottom: 0;
+}
+
+.productlist article.onSale .price span {
+  display: initial;
+}
+
+/*Category Page Style*/
+
+.alphabet ol {
+  padding: 3rem 0rem 3rem 0rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.alphabet ol li a {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Roboto";
+  padding: 0.5rem;
+  -webkit-text-stroke: 0.07rem black;
+  color: #343a40;
+  text-decoration: none;
+}
+
+.alphabet ol li a:hover{
+    background: #d8d8d8;
+    transition: transform 0.3s;
+    border-radius: 0.5rem;
+}
+
+.theBrands {
+  padding: 2rem;
+}
+
+.alphabetGroup h2 {
+  text-align: center;
+  border-bottom: 3px solid black;
+  padding: 1rem;
+  -webkit-text-stroke: 0.1rem black;
+  color: #343a40;
+}
+
+.theBrands .alphabetGropu ol {
+  list-style-type: none;
+}
+
+.theBrands li {
+  border-bottom: 1px solid #343a40;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.theBrands a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+.theBrands li:hover {
+  background: #d8d8d8;
+  transition: transform 0.3s;
+}
+
+/*Product View*/
+
+.productview {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 2rem;
+}
+
+.productview {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 80%;
+}
+
+.productview article img {
+  margin: auto;
+}
+
+.imageDisplay {
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-evenly;
+}
+
+.smallPicture {
+  width: 26rem;
+}
+
+.smallPicture h2 {
+  margin: auto;
+}
+
+.largePicture {
+  width: 1fr;
+  max-height: 900px;
+}
+
+.productAndPurchase {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.productItem {
+  display: flex;
+  flex-flow: column;
+  border: 2px solid black;
+  border-radius: 0.1rem;
+  padding: 2rem;
+  width: 70%;
+}
+
+.purchaseBox p,
+.purchaseBox h3 {
+  color: white;
+}
+
+.purchaseBox {
+  background-color: #252729;
+  padding: 2rem;
+  width: 70%;
+  border-radius: 0.2rem;
+  border: 2px solid black;
+}
+
+.purchaseBox form label {
+  gap: 2rem;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.purchaseBox form label select,
+.purchaseBox form label select option {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.purchaseBox button {
+  display: block;
+  margin-top: 2rem;
+  width: 80%;
+  height: 2rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.purchaseBox form div:nth-child(2)::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.purchaseBox h3 {
+  -webkit-text-stroke: 0.1rem white;
+}
+
+.displayFlex .purchaseBox .discounted,
+.displayFlex .purchaseBox .price span {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .imageDisplay {
+    flex-wrap: wrap;
+  }
+  .largePicture {
+    display: none;
+  }
+
+  .productAndPurchase {
+    flex-wrap: wrap-reverse;
+  }
+}
