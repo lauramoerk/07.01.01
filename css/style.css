@@ -117,7 +117,7 @@ article {
 /*Category Page Style*/
 
 .alphabet ol {
-  padding: 3rem 0rem 3rem 0rem;
+  padding: 3rem 20rem 3rem 20rem;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -136,7 +136,7 @@ article {
 }
 
 .alphabet ol li a:hover{
-    background: #d8d8d8;
+    background: #888da7;
     transition: transform 0.3s;
     border-radius: 0.5rem;
 }
@@ -150,7 +150,7 @@ article {
   border-bottom: 3px solid black;
   padding: 1rem;
   -webkit-text-stroke: 0.1rem black;
-  color: #343a40;
+  color: #000;
 }
 
 .theBrands .alphabetGropu ol {
@@ -158,7 +158,6 @@ article {
 }
 
 .theBrands li {
-  border-bottom: 1px solid #343a40;
   width: 80%;
   margin: auto;
   display: flex;
@@ -172,11 +171,15 @@ article {
   text-decoration: none;
   display: block;
   width: 100%;
+  font-family: "Roboto";
+  -webkit-text-stroke: 0.07rem black;
+  color: #000;
 }
 
 .theBrands li:hover {
-  background: #d8d8d8;
+  background: #888da7;
   transition: transform 0.3s;
+  border-radius: 0.5rem;
 }
 
 /*Product View*/
