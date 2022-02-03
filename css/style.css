@@ -84,12 +84,15 @@ article {
   color: #343a40;
 }
 
-.productlist article.soldOut img {
+.productlist article.soldOut {
   opacity: 0.5;
 }
 
 .productlist article.soldOut::before {
-  content: "Sold Out";
+  content: "sold out";
+  font-size: 1.563rem;
+  -webkit-text-stroke: 0.15rem black;
+  font-family: "Didot", sans-serif;
   position: absolute;
   background: var(--color);
   color: var(--background-color);
@@ -104,6 +107,8 @@ article {
 .productlist article.onSale .discounted {
   display: flex;
   justify-content: space-between;
+  font-size: 0.7rem;
+  -webkit-text-stroke: 0.05rem black;
 }
 
 .discounted > p {
@@ -182,6 +187,13 @@ article {
   border-radius: 0.5rem;
 }
 
+#arrowUp svg{
+  position: fixed;
+left: 4rem;
+bottom: 2rem;
+  height: 3rem;
+}
+
 /*Product View*/
 
 .productview {
@@ -206,34 +218,26 @@ article {
   justify-content: space-evenly;
 }
 
-.smallPicture {
-  width: 26rem;
-}
-
-.smallPicture h2 {
-  margin: auto;
-}
-
 .largePicture {
   width: 1fr;
-  max-height: 900px;
+  max-height: 600px;
 }
 
-.productAndPurchase {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-evenly;
-  gap: 2rem;
-}
 
 .productItem {
   display: flex;
   flex-flow: column;
+  width: 20rem;
   border: 2px solid black;
   border-radius: 0.1rem;
-  padding: 2rem;
-  width: 70%;
+  padding: 2rem;}
+
+.productAndPurchase{
+  display: flex;
+  flex-flow: column;
+  row-gap: 2rem;
 }
+
 
 .purchaseBox p,
 .purchaseBox h3 {
@@ -243,7 +247,7 @@ article {
 .purchaseBox {
   background-color: #252729;
   padding: 2rem;
-  width: 70%;
+  width: 20rem;
   border-radius: 0.2rem;
   border: 2px solid black;
 }
@@ -293,13 +297,7 @@ article {
 
 @media screen and (max-width: 600px) {
   .imageDisplay {
-    flex-wrap: wrap;
-  }
-  .largePicture {
-    display: none;
-  }
-
-  .productAndPurchase {
     flex-wrap: wrap-reverse;
   }
+
 }
