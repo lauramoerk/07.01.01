@@ -1,95 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/common.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
     <title>Product View</title>
-</head>
-<body>
-
-    <header >
-        <h1>
-            prototype.
-        </h1>
-        <div class="banner">
+  </head>
+  <body>
+    <header>
+      <h1>prototype.</h1>
+      <div class="banner">
         <div class="togglebuttonflex">
-              <button class="toggle-btn">Menu</button>
+          <button class="toggle-btn">Menu</button>
         </div>
-              <nav>
-                <ul>
-                  <li><a href="categorypage.html"> Brands </a></li>
-                  <li><a href="productlist.html"> Productlist </a></li>
-                </ul>
-              </nav>
-            </div>
-            </header>
+        <nav>
+          <ul>
+            <li><a href="categorypage.html"> Brands </a></li>
+            <li><a href="productlist.html"> Productlist </a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
+    <main>
+      <ol class="breadcrumbs">
+        <li><a href="index.html">home</a></li>
+        <li>&#10095;</li>
+        <li><a href="categorypage.html">brands.</a></li>
+        <li>&#10095;</li>
+        <li class="brand"><a href="productlist.html">specific brand.</a></li>
+        <li>&#10095;</li>
+        <li class="productName">t-shirt.</li>
+      </ol>
 
-            <main>  
-
-              <ol class="breadcrumbs">
-                <li><a href="index.html">home</a></li>
-                <li>&#10095;</li>
-                <li><a href="categorypage.html">brands.</a></li>
-                <li>&#10095;</li>
-                <li><a href="productlist.html">specific brand.</a></li>
-                <li>&#10095;</li>
-                <li>t-shirt.</li>
-              </ol>
-
-<div class="productview">
-<article class="imageDisplay">
-<section class="productAndPurchase">       
-              <section class="purchaseBox">
-                <h3> product name.</h3>
-                <p> Brand | Type </p>
-                <p class="price"><span>Prev.</span> DKK 1595,-</p>
-                <div class="discounted">
-                  <p>Now DKK 1560,-</p>
-                  <p>-34%</p>
+      <div class="productview">
+        <article class="imageDisplay">
+          <section class="productAndPurchase">
+            <section class="purchaseBox">
+              <h3>product name.</h3>
+              <p class="brandType">Brand | Type</p>
+              <p class="price"><span>Prev.</span> DKK 1595,-</p>
+              <div class="discounted">
+                <p>Now DKK 1560,-</p>
+                <p>-34%</p>
+              </div>
+              <form>
+                <label
+                  >Choose a size
+                  <select name="size">
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </label>
+                <div>
+                  <button>Add to basket</button>
                 </div>
-                <form>
-                  <label
-                    >Choose a size
-                    <select name="size">
-                      <option>S</option>
-                      <option>M</option>
-                      <option>L</option>
-                      <option>XL</option>
-                    </select>
-                  </label>
-                  <div>
-                  <button>Add to basket</button> </div>
-                </form>
-              </section>
+              </form>
+            </section>
 
+            <section class="productItem">
+              <h3>product information.</h3>
+              <p class="subtle">Tshirts | Nike</p>
+              <p class="subCategory"></p>
+              <p class="season"></p>
+              <p class="productionYear"></p>
+              <p class="usage"></p>
+            </section>
+          </section>
 
-              <section class="productItem">
-   
-                <h3>product information.</h3>
-                <p class="subtle">Tshirts | Nike</p>
-                <p>more product information</p>
-              
-              </section>
-              
-</section>
+          <section>
+            <img
+              class="largePicture productImage"
+              src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp"
+              alt="Sahara Team India Fanwear Round Neck Jersey"
+            />
+          </section>
+        </article>
+      </div>
+    </main>
 
-<section>
-  <img class="largePicture" src="https://kea-alt-del.dk/t7/images/webp/1000/1163.webp" alt="Sahara Team India Fanwear Round Neck Jersey">
-</section>
-
-</article>
-
-</div>
-            </main>
-
-
-            <footer>
-
-            </footer>
-            <script src="js/nav.js"></script>
-</body>
+    <footer></footer>
+    <script src="js/product.js"></script>
+    <script src="js/nav.js"></script>
+  </body>
 </html>

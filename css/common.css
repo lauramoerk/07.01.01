@@ -229,3 +229,15 @@ text-decoration: none;
   transition: transform 0.3s;
   border-radius: 0.5rem;
   }
+
+.brand:hover{
+  background: #888da7;
+  transition: transform 0.3s;
+  border-radius: 0.5rem;
+}
+
+.productName:hover{
+  background: #888da7;
+  transition: transform 0.3s;
+  border-radius: 0.5rem;
+}
