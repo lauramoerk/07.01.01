@@ -11,29 +11,29 @@ fetch(url)
 //populate the page
 function showProduct(product) {
   console.log(product);
+
   document.querySelector(".breadcrumbs .brand").textContent =
     product.brandname + ".";
-  document.querySelector(".breadcrumbs .productName").textContent =
-    product.productdisplayname + ".";
-  document.querySelector(".purchaseBox h3").textContent =
-    product.productdisplayname + ".";
-  document.querySelector(".purchaseBox .brandType").textContent =
-    product.brandname + " | " + product.productdisplayname + ".";
+document.querySelector(".breadcrumbs .productName").textContent = `${product.productdisplayname}  .`;
+  document.querySelector(".purchaseBox h3").textContent = `${product.productdisplayname}  .`;
+  document.querySelector(".purchaseBox .brandType").textContent = `${product.brandname}   |   ${product.productdisplayname}.`;
   document.querySelector(".productItem .subtle").textContent =
-    product.brandname + " | " + product.productdisplayname + ".";
+  `${product.brandname}  |  ${product.productdisplayname}.`;
 
   product.productdisplayname;
+ 
   document.querySelector(
     "img.productImage"
   ).src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
-  document.querySelector("img.productImage").alt = productdisplayname;
+
+  document.querySelector("img.productImage").alt = product.productdisplayname;
 
   document.querySelector(".subtle").textContent =
   `${product.articletype} | ${product.brandname}`;
-
-  //document.querySelector(".season").textContent =
-  //"season:" +`${product.season}`;
-  
+ document.querySelector(".subCategory").textContent =`Sub-category: ${product.subcategory}.`;
+  document.querySelector(".season").textContent =`Season: ${product.season}.`;
+  document.querySelector(".productionYear").textContent =`Year of production: ${product.productionyear}.`;
+  document.querySelector(".usage").textContent =`Designed for: ${product.usagetype}.`;
 }
 
 /*                <p class="subCategory"></p>

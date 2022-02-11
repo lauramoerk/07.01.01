@@ -1,4 +1,8 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+const urlParams = new URLSearchParams(window.location.search);
+const brandname = urlParams.get("brandname");
+
+
+const url = "https://kea-alt-del.dk/t7/api/products?limit=1000" + brandname;
 
 fetch(url)
   .then(function (res) {
@@ -27,6 +31,7 @@ function handleProductList(data) {
 </template>  */
 
 function showProduct(product) {
+
   console.log(product);
   // grab the template
   const template = document.querySelector("#listProductTemplate").content;
@@ -34,8 +39,7 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
 
   copy
-    .querySelector(".productLink")
-    .setAttribute("href", `productview.html?id=${product.id}`);
+    .querySelector(".productLink").setAttribute("href", `productview.html?id=${product.id}`);
 
   copy.querySelector(
     ".subtle"

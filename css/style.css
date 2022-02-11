@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root{
+  --border-radius:0.5rem;
+}
+
+
 @font-face {
   font-family: Roboto;
   src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
@@ -64,20 +69,25 @@ article {
   box-shadow: 0px 0px 2px #252729;
 }
 
+.productLink{
+display: block;
+padding: 1rem;
+text-decoration: none;
+background-color: #000;
+border-radius: var(--border-radius);
+  color: white;
+}
+
 .sale-item:hover{
     opacity: 0.7;
 }
 
-.sale-item > button {
-  margin-top: auto;
-  background: #000;
-  color: white;
-  padding: 0.5rem;
-  border: 2px solid #000;
-  border-radius: 0.05rem;
-  font-size: 1.2rem;
+.discounted{
+  padding: 0rem 0rem 0.5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
 }
-
 
 .subtle {
   color: #343a40;
