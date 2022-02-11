@@ -4,6 +4,8 @@ const brandname = urlParams.get("brandname");
 
 const url = "https://kea-alt-del.dk/t7/api/products?limit=1000" + brandname;
 
+//
+
 fetch(url)
   .then(function (res) {
     return res.json();
@@ -31,6 +33,8 @@ function handleProductList(data) {
 </template>  */
 
 function showProduct(product) {
+
+  
 
   console.log(product);
   // grab the template

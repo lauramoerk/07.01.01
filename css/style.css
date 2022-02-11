@@ -97,6 +97,7 @@ border-radius: var(--border-radius);
   opacity: 0.5;
 }
 
+
 .productlist article.soldOut::before {
   content: "sold out";
   font-size: 1.563rem;
@@ -230,6 +231,29 @@ bottom: 2rem;
 .largePicture {
   width: 1fr;
   max-height: 600px;
+}
+
+
+.soldOut {
+  opacity: 0.5;
+
+}
+
+
+.soldOut::before {
+  content: "sold out";
+  font-size: 1.563rem;
+  -webkit-text-stroke: 0.15rem black;
+  font-family: "Didot", sans-serif;
+  position: absolute;
+  z-index: 10;
+  background: var(--color);
+  color: black;
+  padding: 1rem;
+}
+
+.soldOutPV{
+  opacity: 0.5;
 }
 
 

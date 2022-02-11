@@ -1,5 +1,3 @@
-
-
 const url = "https://kea-alt-del.dk/t7/api/brands"
 
 
@@ -50,3 +48,4 @@ function showBrand(product){
     parent.appendChild(copy);
 
 }
+

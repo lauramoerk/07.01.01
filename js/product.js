@@ -14,14 +14,45 @@ function showProduct(product) {
 
   document.querySelector(".breadcrumbs .brand").textContent =
     product.brandname + ".";
+
 document.querySelector(".breadcrumbs .productName").textContent = `${product.productdisplayname}  .`;
+document.querySelector(".breadcrumbs .brandnameLink").href = `productlist.htmlt/${product.brandname}.webp`;
+
+
   document.querySelector(".purchaseBox h3").textContent = `${product.productdisplayname}  .`;
   document.querySelector(".purchaseBox .brandType").textContent = `${product.brandname}   |   ${product.productdisplayname}.`;
   document.querySelector(".productItem .subtle").textContent =
   `${product.brandname}  |  ${product.productdisplayname}.`;
 
-  product.productdisplayname;
+  if (product.soldout > 0) {
+    document.querySelector(".imageDisplay").classList.add("soldOut");
+  } else {
+    document.querySelector(".imageDisplay").classList.remove("soldOut");
+  }
+
+  if (product.soldout > 0) {
+    document.querySelector(".purchaseBox").classList.add("soldOutPV");
+  } else {
+    document.querySelector(".purchaseBox").classList.remove("soldOutPV");
+  }
+
+
+  if (product.discount > 0) {
+    document.querySelector(".purchaseBox").classList.add("onSale");
+    document.querySelector("span").style.display = "block";
+  } else {
+    document.querySelector(".discounted").style.display = "none";
+    document.querySelector("span").style.display = "none";
+  }
  
+  
+  const newPrice = Math.round(
+    product.price - (product.price / 100) * product.discount
+  );
+
+  document.querySelector(".discounted p").textContent =
+    "On sale for" + " " + `${newPrice}` + ",-" + " " + "DKK.";
+
   document.querySelector(
     "img.productImage"
   ).src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
@@ -36,7 +67,3 @@ document.querySelector(".breadcrumbs .productName").textContent = `${product.pro
   document.querySelector(".usage").textContent =`Designed for: ${product.usagetype}.`;
 }
 
-/*                <p class="subCategory"></p>
-                <p class="season"> </p>
-                <p class="productionYear"></p>
-                <p class="usage"></p> */
