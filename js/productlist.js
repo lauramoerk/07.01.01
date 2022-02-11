@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const brandname = urlParams.get("brandname");
 
 
-const url = "https://kea-alt-del.dk/t7/api/products?limit=1000" + brandname;
+const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
 
 //
 
