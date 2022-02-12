@@ -1,9 +1,10 @@
 const urlParams = new URLSearchParams(window.location.search);
-const brandname = urlParams.get("brandname");
+const subcategory = urlParams.get("subcategory");
 
 
 
-const url = "https://kea-alt-del.dk/t7/api/products?brandname=" + brandname;
+const url = "https://kea-alt-del.dk/t7/api/products?subcategory=" + subcategory;
+
 
 
 
@@ -49,7 +50,7 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
 
   copy
-    .querySelector(".productLink").setAttribute("href", `productview.html?id=${product.id}`);
+    .querySelector(".productLink").setAttribute("href", `productviewsub.html?id=${product.id}`);
 
 // copy.querySelector(".specificBrand").textContent =`${brandname}` + ".";
   
@@ -99,5 +100,5 @@ copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${pr
 
 // fetch the data
 
-document.querySelector(".brand").textContent = brandname + ".";
+document.querySelector(".brand").textContent = subcategory + ".";
 
