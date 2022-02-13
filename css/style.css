@@ -14,6 +14,7 @@
   src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 }
 
+/*Index Page*/
 .indexh1{   font-size: 3.052rem;
   -webkit-text-stroke: 0.15rem black;
   color: white;
@@ -24,6 +25,10 @@
   margin-top: 0;
 text-align: right;}
 
+.indexgrid{
+  display: grid;
+  grid-template-rows: 90vh 1fr;
+}
 
 
 /*Product List Style*/

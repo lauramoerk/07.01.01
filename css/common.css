@@ -87,6 +87,23 @@ body{
     margin-bottom: 0rem;
 }
 
+footer{
+  border-top: solid black 2px;
+  display: flex;
+  justify-content: end;
+}
+
+footer p{
+  font-size: 0.8rem;
+  -webkit-text-stroke: 0.07rem black;
+  color: black;
+  font-family: "Didot", sans-serif;
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-bottom: 0rem;
+  margin-top: 0;
+  
+}
 
 
 
