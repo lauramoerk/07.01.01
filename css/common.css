@@ -170,6 +170,14 @@ ol{
 
 .h1link{
   text-decoration: none;
+  font-size: 3.052rem;
+  -webkit-text-stroke: 0.15rem black;
+  color: white;
+  font-family: "Didot", sans-serif;
+  padding: 2rem;
+  padding-left: 4rem;
+  padding-bottom: 0rem;
+  margin-top: 0;
 }
 
 @media screen and (max-width:600px) {
